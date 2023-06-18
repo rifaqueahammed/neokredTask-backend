@@ -22,7 +22,7 @@ const userSignUp = async (req, res) => {
 
       const newUser = new User({
         fullName,
-        dob: DOB,
+        DOB,
         phoneNumber,
         email,
         password: hashedPassword,
@@ -33,7 +33,6 @@ const userSignUp = async (req, res) => {
         zipCode,
         country,
       });
-
       await newUser.save();
       res.json({ success: true });
     }

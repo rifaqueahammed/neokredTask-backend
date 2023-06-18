@@ -8,11 +8,11 @@ const getProfile = async (req, res) => {
   try {
     const user = await User.findOne({ _id: req.id });
     if (user) {
-      const formattedDOB = moment(user.dob).format('MMMM Do, YYYY');
+      const formattedDOB = moment(user.DOB).format('MMMM Do, YYYY');
       const data = {
         _id: user._id,
         fullName: user.fullName,
-        dob: formattedDOB,
+        DOB: formattedDOB,
         phoneNumber: user.phoneNumber,
         email: user.email,
         securityQuestion: user.securityQuestion,
