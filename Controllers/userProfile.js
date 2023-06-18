@@ -11,7 +11,7 @@ const getProfile = async (req, res) => {
       const formattedDOB = moment(user.dob).format('MMMM Do, YYYY');
       const data = {
         _id: user._id,
-        full_name: user.fullName,
+        fullName: user.fullName,
         dob: formattedDOB,
         phoneNumber: user.phoneNumber,
         email: user.email,
