@@ -3,7 +3,7 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-  full_name: {
+  fullName: {
     type: String,
     required: true,
   },
@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
-  phone_number: {
+  phoneNumber: {
     type: Number,
     required: true,
     unique: true,
@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  security_question: {
+  securityQuestion: {
     type: String,
     required: true,
   },
@@ -43,7 +43,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  zip_code: {
+  zipCode: {
     type: Number,
     required: true,
   },

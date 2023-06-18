@@ -1,18 +1,16 @@
 /* eslint-disable no-console */
-/* eslint-disable camelcase */
 /* eslint-disable import/no-extraneous-dependencies */
-
 const bcrypt = require("bcrypt");
 const User = require('../Model/User');
 
 const userSignUp = async (req, res) => {
   try {
-    const { email, phone_number, full_name, DOB, password, security_question, address, city, state, zip_code, country } = req.body.formValues;
+    const { email, phoneNumber, fullName, DOB, password, securityQuestion, address, city, state, zipCode, country } = req.body.formValues;
 
     const existingUser = await User.findOne({
       $or: [
         { email },
-        { phone: phone_number },
+        { phoneNumber},
       ],
     });
 
@@ -23,16 +21,16 @@ const userSignUp = async (req, res) => {
       const hashedPassword = await bcrypt.hash(password, salt);
 
       const newUser = new User({
-        full_name,
+        fullName,
         dob: DOB,
-        phone_number,
+        phoneNumber,
         email,
         password: hashedPassword,
-        security_question,
+        securityQuestion,
         address,
         city,
         state,
-        zip_code,
+        zipCode,
         country,
       });
 

@@ -11,15 +11,15 @@ const getProfile = async (req, res) => {
       const formattedDOB = moment(user.dob).format('MMMM Do, YYYY');
       const data = {
         _id: user._id,
-        full_name: user.full_name,
+        full_name: user.fullName,
         dob: formattedDOB,
-        phone_number: user.phone_number,
+        phoneNumber: user.phoneNumber,
         email: user.email,
-        security_question: user.security_question,
+        securityQuestion: user.securityQuestion,
         address: user.address,
         city: user.city,
         state: user.state,
-        zip_code: user.zip_code,
+        zipCode: user.zipCode,
         country: user.country,
       };
       res.json(data);

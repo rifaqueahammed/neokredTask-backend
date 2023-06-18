@@ -17,7 +17,7 @@ const userLogin = async (req, res) => {
           // eslint-disable-next-line no-underscore-dangle
           id: user._id,
           email: user.email,
-          full_name: user.full_name
+          fullName: user.fullName
         };
 
         const jwtSecretKey = process.env.JWT_SECRET_KEY;
