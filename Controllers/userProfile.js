@@ -1,37 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-underscore-dangle */
 
-// const User = require('../Model/User');
-
-// module.exports = {
-//   getprofile : (req,res)=>{
-//     try{
-//         User.findOne({_id:req.id}).then((result)=>{
-//            if(result){
-//             const data = {
-//                 // eslint-disable-next-line no-underscore-dangle
-//                 _id:result._id,
-//                 full_name: result.full_name,
-//                 dob: result.dob,
-//                 phone_number: result.phone_number,
-//                 email: result.email,
-//                 security_question:result.security_question,
-//                 address: result.address,
-//                 city: result.city,
-//                 state: result.state,
-//                 zip_code: result.zip_code,
-//                 country: result.country,
-//             }
-//             res.json(data);
-//            }
-//         });
-//     }catch{
-//         // eslint-disable-next-line no-console
-//         console.log('error')
-//     }
-
-// },
-// }
 const moment = require('moment');
 const User = require('../Model/User');
 

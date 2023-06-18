@@ -1,20 +1,4 @@
 /* eslint-disable no-console */
-// /* eslint-disable import/no-extraneous-dependencies */
-// const mongoose = require("mongoose");
-
-// module.exports = () => {
-//   const uri = "mongodb+srv://rifaquekh373406:TZvbRbsB3cjW71Zd@cluster0.1elnyh3.mongodb.net/?retryWrites=true&w=majority";
-//   mongoose
-//     .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-//     .then(() => {
-//       // eslint-disable-next-line no-console
-//       console.log("Connected to MongoDB Atlas");
-//     })
-//     .catch((error) => {
-//       // eslint-disable-next-line no-console
-//       console.error("Error connecting to MongoDB Atlas:", error);
-//     });
-// };
 
 const mongoose = require("mongoose");
 
