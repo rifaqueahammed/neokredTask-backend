@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const connectToDatabase = async () => {
   try {
-    const uri = "mongodb+srv://rifaquekh373406:TZvbRbsB3cjW71Zd@cluster0.1elnyh3.mongodb.net/?retryWrites=true&w=majority";
+    const uri = process.env.MONGO_URI;
     await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     console.log("Connected to MongoDB Atlas");
   } catch (error) {
